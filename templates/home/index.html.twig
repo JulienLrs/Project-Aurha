@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+{# {{ dump(pageAccueil) }} #}
+<style>
+    .main-wrapper { margin: 1em auto; max-width: 800px; width: 70%; font: 13px/1.2 sans-serif; }
+    .main-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+<div class="main-wrapper" style="font: 12px/1.5 sans-serif">
+    <h1>{{ pageAccueil.titre }}</h1>
+
+        <h2>{{ pageAccueil.texte}}</h2>  
+    <img src="{{ asset('images/' ~ pageAccueil.imageName) }}" alt="" class="img-fluid" style="margin: 1em auto">    
+
+        <h2>Titre 2</h2> 
+        <img src="{{ asset('images/IMG_8501.jpg') }}" alt="" class="img-fluid" style="margin: 1em auto">    
+        
+        <h2>Titre 3</h2> 
+        <img src="{{ asset('images/IMG_8499.jpg') }}" alt="" class="img-fluid" style="margin: 1em auto">    
+        
+        <h2>Titre 4</h2> 
+        <img src="{{ asset('images/IMG_8504.jpg') }}" alt="" class="img-fluid" style="margin: 1em auto">    
+        
+        <h2>Titre 5</h2> 
+        <img src="{{ asset('images/IMG_8505.jpg') }}" alt="" class="img-fluid" style="margin: 1em auto">
+    </div>
+{% endblock %}
