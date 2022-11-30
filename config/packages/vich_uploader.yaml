@@ -1,0 +1,22 @@
+vich_uploader:
+    db_driver: orm
+    metadata:
+        type: attribute
+
+    mappings:
+        auteur:
+            uri_prefix: /images/auteur
+            upload_destination: '%kernel.project_dir%/public/images/auteur'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        calligraphie:
+            uri_prefix: /images/calligraphie
+            upload_destination: '%kernel.project_dir%/public/images/calligraphie'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        tableaux:
+            uri_prefix: /images/tableaux
+            upload_destination: '%kernel.project_dir%/public/images/tableaux'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        oeuvres:
+            uri_prefix: /images/oeuvres
+            upload_destination: '%kernel.project_dir%/public/images/oeuvres'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer    

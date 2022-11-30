@@ -8,9 +8,9 @@ use Doctrine\Persistence\ObjectManager;
 
 class HomeFixtures extends Fixture
 {
-     // ================================== //
-     // ============ METHODES ============ //
-     // ================================== //
+    // ================================== //
+    // ============ METHODES ============ //
+    // ================================== //
     public function load(ObjectManager $manager): void
     {
         // On instancie un objet du modele Home

@@ -1,0 +1,43 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}Auteur index{% endblock %}
+
+{% block body %}
+    <h1>Auteur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>LogoName</th>
+                <th>ImageName</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for auteur in auteurs %}
+            <tr>
+                <td>{{ auteur.id }}</td>
+                <td>{{ auteur.name }}</td>
+                <td>{{ auteur.description }}</td>
+                <td>{{ auteur.logoName }}</td>
+                <td>{{ auteur.imageName }}</td>
+                <td>{{ auteur.updatedAt ? auteur.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_admin_auteur_show', {'id': auteur.id}) }}">show</a>
+                    <a href="{{ path('app_admin_auteur_edit', {'id': auteur.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_auteur_new') }}">Create new</a>
+{% endblock %}
